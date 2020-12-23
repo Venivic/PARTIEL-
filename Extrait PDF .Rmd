@@ -1,0 +1,76 @@
+---
+title: "NV TEMPALTE"
+author: "Victor Garcia"
+date: "22/12/2020"
+output: html_document
+encoding: "UTF-8"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clÃ© avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 critères. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RDd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n 11  : "GGPLOT2 "
+
+Travail realise par "VICTOR GARCIA" 
+
+https://github.com/Venivic/GGPLOT_2-
+
+
+
+## Synthese : 
+
+ggplot2 est une extension du tidyverse qui permet de generer des graphiques avec une syntaxe coherente et puissante. Elle necessite l'apprentissage d'un "mini-langage" supplementaire, mais permet la construction de graphiques complexes de maniere efficace.
+
+Une des particularites de ggplot2 est qu'elle part du principe que les donn�es relatives � un graphique sont stockees dans un tableau de donnees (data frame, tibble ou autre).
+
+
+## Extrait commenté du code : 
+
+library(ggplot2)
+dataframe <- data.frame(mpg) #definition du DataFrame
+ggplot(dataframe) +
+ aes(x = displ, y = cyl) +
+ geom_point(size = 1L, colour = "#0c4c8a") +
+ theme_minimal() +
+ facet_wrap(vars(cty))
+ 
+ j ai decid� d'utiliser ce code car il est un point cl� de GGPLOT 2, en effet ce code est issus des graphiques avec Esquisse. 
+ 
+Esquisse permet de generer d'une maniere tres facile des graphiques.
+
+## AUTO-Evalutation du travail : 
+
+<br> 1) Effort de présentation :  j'ai essaye de compartimenter au mieux les differentes fonctionalites. Pour faciliter les recherches via un "CTRL+F".
+
+<br> 2) Le knit est réalisable et bien présenté : je n'ai pas reussi a kniter notamment du au fichier sur le covid qui etait sur mon ordinateur. j'ai du mettre cette partie sous forme de texte et nous sous un environnement R 
+
+<br> 3) Explications simples et efficaces : j'ai essaye d'etre le plus concis possible afin a la fois de faciliter la comprehension generale mais aussi pour faire gagner du temps a ceux qui cherche une reponse rapide. 
+
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité :en l'occurence, j ai tout fait pour que le RMD puisse etre utliser par tous et le plus facilement possible. J ai reutiliser beaucoup de fois la methode avec une reussite a chaque fois. 
+
+<br> 5) Description des fonctions utilsées et du raisonnement : J'ai detaille toutes les fonctions cles afin de faire comprendre mon travail a tous. 
+
+
+## Conclusion : 
+ 
+Dans ce Rmd, j'ai decide d'analyser le package GGPlot2 en profondeur, ainsi cela m'a permit de visualiser des donnes sur le covid 19, la suite sera pour moi d'utilser le package Caret pour  pouvoir faire des predictions sur le covid 19. 
+
+ 
