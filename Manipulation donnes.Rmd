@@ -1,0 +1,61 @@
+---
+title: "Script partiel Victor Garcia"
+author: "Victor Garcia"
+date: "21/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clé avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 criteres. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RMd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n5   : "MANIPULATION DES FACTEURS "
+
+Travail réalisé par "clairemazzucato". 
+
+https://github.com/clairemazzucato/PSBX/blob/main/Manipulation%20des%20facteurs/Manipulation_des_facteurs.Rmd
+
+
+## Synthese : 
+
+<br> Ce RMD nous explique les fonctions de base qui permettent a l 'ultilsateur de pouvoir transformer ses dataframe afin de les rendre plus lisibles, facile a exploiter ou encore plus maleables pour les autres utilisateurs qui utiliseront le dataFrame par la suite pour y inserer de nouvelles valeurs ou faire d'autres travaux. 
+
+## Extrait commenté du code :
+
+j ai pu constater que ce RMD etait base sur la manipulation de donnee. Le code etant fait d un grand nombre de fonction permettant de manipuler les donnees d'un DataFrame
+
+
+
+## Evalutation du travail : 
+
+
+
+<br> 1) Effort de présentation : le RMd est facile à lire et intuitif : J'ai pu constater que le RMD était effectivement facile à lire.une tres bonne organisation de ce dernier. les fonctions a la suite permette une bonne comprehension du sujet. 
+<br> 2) Le knit est réalisable et bien présenté :  le knit s'est bien passé, pas trop long à élaborer sous R.  
+<br> 3) Explications simples et efficaces : un des RMD les plus faciles a comprendre,  tres bonnes explication sur l'ensemble de rdm. Elles sont tres bien expliques. 
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité : j ai pu utiliser ces foinctions pour manipuler mon DataFrame sur le covid 19. 
+<br> 5) Description des fonctions utilsés et du raisonnement : les fonctions expliques pas a pas permettent d'etre utilisees rapidement et facilement. 
+
+
+
+## Conclusion : 
+En définitive, ce RMD tres instructif permet de decouvrir les differentes utlisations de la manipulation de donnes. A tres court termes, je vais utiliser d'avantages ces fonctions pour la datavisualisation en cours avec mon DataFrame Covid 19.  
+
+

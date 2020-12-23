@@ -1,0 +1,125 @@
+---
+title: "Script partiel Victor Garcia"
+author: "Victor Garcia"
+date: "21/12/2020"
+output: "html_document"
+encoding: "UTF-8"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clé avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 criteres. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RMd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n°1 : "MNIST et Fashion MNIST ( Illustration dans R)"
+
+Travail réalisé par Kanlanfeyi Kabirou, Hounsinou Jordy". 
+
+https://github.com/kabirou7/PSBX
+
+
+## Synthese : 
+
+<br> Fashion-MNISTest un ensemble de donnees d'images d'articles de Zalando , compose d'un ensemble d'apprentissage de 60 000 exemples et d'un ensemble de test de 10 000 exemples. Chaque exemple est une image en niveaux de gris 28x28, associee à une etiquette de 10 classes.Fashion-MNIST permet de remplacer directement le jeu de donnees MNIST original pour l'analyse comparative des algorithmes d'apprentissage automatique. Il partage la meme taille d'image et la meme structure que les divisions d'entrainement et de test.
+
+<br>La base de donnees MNIST pour Modified ou Mixed National Institute of Standards and Technology, est une base de donnees de chiffres ecrits à la main. C'est un jeu de donnees tres utilise en apprentissage automatique.
+
+La reconnaissance de l'ecriture manuscrite est un probleme difficile, et un bon test pour les algorithmes d'apprentissage. La base MNIST est devenu un test standard. Elle regroupe 60000 images d'apprentissage et 10000 images de test, issues d'une base de donnees anterieure, appelee simplement NIST. Ce sont des images en noir et blanc, normalisees centrees de 28 pixels de cote.
+
+
+
+
+## Extrait commenté du code : ATTENTION REMARQUE : 
+
+Le fichier CSV n'etant pas dans le github (train.csv), il m'est impossbile de kniter correctement dans un espace R
+
+En l'occurence, les auteurs utilisent le code suivant : 
+
+
+library(readr)
+library(randomForest)
+library(caret)
+library(naivebayes)
+library(class)
+#Pour fractionner les donnees
+library(dplyr)
+#Librairies Installee
+#caret pour la matrice de confusion
+#Lire les deux donnees: MNIST et fashion MNIST
+mnist <- read_csv("train.csv")
+fashion <- read_csv("fashion.csv")
+
+##Encodage de la colonne label sous forme de categorie avec la fonction *factor* **
+
+mnist$label = factor(mnist$label)
+fashion$label = factor(fashion$label)
+mnist[,2:785] = mnist[,2:785]/255
+fashion[,2:785] = fashion[,2:785]/255
+
+#Visualisation de la structure des donnees en affichant les premieres lignes
+head(mnist[1:10,1:10])
+head(fashion[1:10,1:10])
+
+train_mnist <-  sample_frac(mnist, 0.8)
+test_mnist <- anti_join(mnist, train_mnist)
+train_fashion <-  sample_frac(fashion, 0.8)
+test_fashion <- anti_join(fashion, train_fashion)
+
+rf_MNIST <- randomForest(label ~ ., data = train_mnist, ntree = 10)
+pred_MNIST1 <- predict(rf_MNIST, test_mnist)
+rf_FASH <- randomForest(label ~ ., data = train_fashion, ntree = 10)
+pred_FASH1 <- predict(rf_FASH, test_fashion)
+
+bayes_MNIST <- randomForest(label ~ ., data = train_mnist)
+pred_MNIST2 <- predict(bayes_MNIST, test_mnist)
+bayes_FASH <- randomForest(label ~ ., data = train_fashion)
+pred_FASH2 <- predict(bayes_FASH, test_fashion)
+
+cm_rf1 <- confusionMatrix(pred_MNIST1, test_mnist$label)
+cm_rf2 <- confusionMatrix(pred_FASH1, test_fashion$label)
+cm_nb1 <- confusionMatrix(pred_MNIST2, test_mnist$label)
+cm_nb2 <- confusionMatrix(pred_FASH2, test_fashion$label)
+
+#Nous creons une matrice 2x2
+valeurs <- matrix(c(cm_nb1$overall["Accuracy"],cm_nb2$overall["Accuracy"],cm_rf1$overall["Accuracy"],cm_rf2$overall["Accuracy"]), ncol = 2)
+colnames(valeurs)<- c("Naive Bayes", "Random Forest")
+rownames(valeurs)<- c("MNIST", "Fashion MNIST")
+tableau <- as.table(valeurs)
+print(tableau)
+
+print(cm_rf1)
+
+
+
+
+## Evalutation du travail : 
+
+
+
+<br> 1) Effort de présentation : le RMd est facile à lire et intuitif : J'ai pu constater que le RMD était effectivement facile à lire, on comprend le cheminement de la pensee des auteurs. 
+<br> 2) Le knit est réalisable et bien présenté : Effectivement le knit s'est bien passé, pas trop long à élaborer sous R. 
+<br> 3) Explications simples et efficaces : les explications manquent de clarete, ne sont pas explique "step by step"
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité : il m'est impossible de reproduire un tel code avec un autre dateFrame, il manque des informations sur les fonctions et leur utilites 
+<br> 5) Description des fonctions utilsés et du raisonnement : comme dit au niveau de la question 4, les fonctions ne sont pas developpes et je ne peut pas connaitre leur utlite. 
+
+
+
+## Conclusion : 
+En définitive, ce RMD est tres interessant, malgre le fait que celui ci soit tres specifique au package Fashion MNIST, on peut entrevoir des perspecitves de machine learning permettant d'etre utilise sur d'autres dataframe. 
+

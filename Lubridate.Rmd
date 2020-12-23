@@ -1,0 +1,73 @@
+---
+title: "NV TEMPALTE"
+author: "Victor Garcia"
+date: "22/12/2020"
+output: html_document
+encoding: "UTF-8"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clÃ© avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 critères. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RDd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n10  : "TUTOLUBRIDATE"
+
+Travail réalisé par GASPARD PALAY " le 09/11/2020 
+
+https://github.com/GaspardPalay/PSBX/blob/main/TutorielLubridate/TutoLubridate.Rmd
+
+
+
+## Synthese : 
+
+Les données date-heure peuvent être frustrantes à utiliser dans R. Les commandes R pour date-heure ne sont généralement pas intuitives et changent en fonction du type d'objet date-heure utilisé. De plus, les méthodes que nous utilisons avec les dates-heures doivent être robustes aux fuseaux horaires, aux jours bissextiles, aux heures d'été et à d'autres bizarreries liées à l'heure, et R n'a pas ces capacités dans certaines situations. Lubridate facilite les choses que R fait avec les dates-heures et permet de faire les choses que R ne fait pas.
+
+
+
+## Extrait commenté du code : 
+
+```{r,echo=TRUE,eval=FALSE}
+ymd("2019/04_11")
+ymd_hm("2019.04.11 14h37")
+ymd_hms("20190407143752")
+hms("14h37min52s")
+```
+
+on voit qu'avec des fonctions basiques on obtient des résultat rapides 
+
+petite remarque, le RMD n'explique pas comment calculer des temps qui peut etre très pratique. 
+
+## Evalutation du travail : 
+
+
+<br> 1) Effort de présentation : tres bien présenté, tres visuel.
+
+<br> 2) Le knit est réalisable et bien présenté : knit facile et réalisable rapidement 
+
+<br> 3) Explications simples et efficaces : les explications sont tres bien detaillés 
+
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité :  reproductible instantanément sans difficultés 
+
+<br> 5) Description des fonctions utilsées et du raisonnement : les fonctions sont trés bien décrites et illustrés 
+
+## Conclusion : 
+
+En définitive, ce RMD est extrêmement intéressant pour que l'on puisse maitriser  rapidement et facilement le package Lubridate.  
+ 

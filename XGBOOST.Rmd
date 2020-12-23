@@ -1,0 +1,102 @@
+---
+title: "NV TEMPALTE"
+author: "Victor Garcia"
+date: "22/12/2020"
+output: html_document
+encoding: "UTF-8"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clÃ© avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 critères. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RDd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n7  : "P-Value "
+
+Travail réalisé par "BENJAMIN GUIGON " le 17/12/2020 
+
+https://github.com/benjaminguigon/PSBX/blob/main/RMD-Final-XGboost.pdf
+
+
+
+## Synthese : 
+
+Xgboost est l'abréviation de e X treme G radient Boost ing package.
+
+Le but de cette vignette est de vous montrer comment utiliser Xgboost pour créer un modèle et faire des prédictions.
+
+Il prend en charge diverses fonctions objectives, notamment la régression , la classification et le classement . Le package est conçu pour être extensible, de sorte que les utilisateurs sont également autorisés à définir facilement leurs propres fonctions objectives.
+
+Il a plusieurs caractéristiques:
+
+Vitesse: il peut faire automatiquement des calculs parallèles sous Windows et Linux , avec OpenMP . Il est généralement plus de 10 fois plus rapide que le classique gbm.
+
+Type d'entrée: il faut plusieurs types de données d'entrée:
+
+Dense Matrix: R « est dense matrice, à savoir matrix;
+
+Sparse Matrix: R « est clairsemée matrice, à savoir Matrix::dgCMatrix;
+
+
+Sparsity: il accepte les entrées clairsemées pour le booster d'arbre et le booster linéaire , et est optimisé pour les entrées clairsemées ;
+
+Personnalisation: il prend en charge des fonctions objectives et des fonctions d'évaluation personnalisées.
+
+
+## Extrait commenté du code : 
+
+library(xgboost)
+library(magrittr)
+library(dplyr)
+library(Matrix)
+library(DiagrammeR)
+library(dplyr)         
+library(ggplot2)
+library(rpart)
+library(rpart.plot)
+library(caret)
+library(randomForest)
+library(modeldata)
+library(datasets)
+library(fastDummies)
+
+il aurait été plus judicieux d'expliquer à quoi sert chaque paquet. 
+
+pour le reste, je ne comprend pas le code, il m'est impossible d'aller plus loin avec ce code sans comprendre.
+
+## Evalutation du travail : 
+
+
+<br> 1) Effort de présentation : Le code est a la suite, sans réel effort de présentation, pas de rubrique ou autre. 
+
+<br> 2) Le knit est réalisable et bien présenté : il m'est impossbible de kniter le document car je n'ai pas tous les fichiers CSV. 
+
+<br> 3) Explications simples et efficaces : Manque d'explication et de commentaire au niveau du code en lui même. 
+
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité : j ai essayé de realaliser un code equivalent mais impossible. je n'ai pas assez d'informations pour pouvoir realiser un tel travail.  
+
+<br> 5) Description des fonctions utilsées et du raisonnement : aucune description des fonctions utilsées. 
+
+
+## Conclusion : 
+
+Il s'agit d'un RMD tres intéressant pour faire de la prediction. Cependant n'ayant pas pu realiser un travail comparable du au manque d'explication sur les fonctions et leurs utlités.
+En ce qui concerne le résultat, on obtient un resultat fiable a 68%, j'aurais aime voir un modèle avec plus de fiabilité. 
+
+ 

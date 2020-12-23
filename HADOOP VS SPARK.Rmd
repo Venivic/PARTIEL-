@@ -1,0 +1,72 @@
+---
+title: "Script partiel Victor Garcia"
+author: "Victor Garcia"
+date: "21/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clé avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 criteres. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RMd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n4  : "RPART PACKAGE "
+
+Travail réalisé par "MAXIME ET SILVA ". 
+
+https://github.com/mallaker/PSB_X/blob/main/Package%20Rpart/Rpart%20package.Rmd
+
+
+## Synthese : 
+
+<br> Le rpartcode construit des modeles de classification ou de regression d'une structure tres generale en utilisant une procedure en deux etapes; les modles resultants peuvent etre representes sous forme d'arbres binaires. Le package met en oeuvre de nombreuses idees trouvees dans le livre et les programmes CART (Classification and Regression Trees) de Breiman, Friedman, Olshen et Stone.
+
+
+## Extrait commenté du code :
+
+j'ai decide de traiter la partie du code suivante : 
+```{r}
+
+#prediction du modele sur les donn�es de test
+#ptitanic.test_predict <- predict(ptitanic.Arbre_Opt,newdata =ptitanic.test,type = "class")
+#affichons juste la prediction faite sur les 10 premiers elements
+#print(ptitanic.test_predict[1:10])
+#Matrice de confusion
+#MC <- table(ptitanic.test$survived,ptitanic.test_predict)
+#print(MC)
+````
+
+En effet, selon moi la partie qui permet de pouvoir faire des test predictif est la cle pour la data visualiation.
+
+## Evalutation du travail : 
+
+
+
+<br> 1) Effort de présentation : le RMd est facile à lire et intuitif : J'ai pu constater que le RMD était effectivement facile à lire.une tres bonne organisation de ce dernier
+<br> 2) Le knit est réalisable et bien présenté :  le knit s'est bien passé, pas trop long à élaborer sous R.  
+<br> 3) Explications simples et efficaces : un des RMD les plus faciles a comprendre,  tres bonnes explication sur l'ensemble de rdm. Elles sont bien expliques 
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité :j'ai pu refaire un equivalent avec un autre DataFrame. 
+<br> 5) Description des fonctions utilsés et du raisonnement : comme dit precedamment, il n'y a pas de code ni de raisonnement complexe. 
+
+
+
+## Conclusion : 
+En définitive, ce RMD tres instructif permet de decouvrir RPART PACKAGE. Ce tuto a permis d'expliquer comment on pouvait grace a ce package realiser des arbes graphiques de l'arbre optimal pour un DataFrame. Cela pourra m'aider quand je devrais , au semestre prochian faire de la visualisation de donnee. 
+
+

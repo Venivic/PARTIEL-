@@ -1,0 +1,96 @@
+---
+title: "Script partiel Victor Garcia"
+author: "Victor Garcia"
+date: "21/12/2020"
+output: html_document
+encoding: "UTF-8"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clé avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 criteres. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RMd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n°1 : "MNIST et Fashion MNIST ( Illustration dans R)"
+
+Travail réalisé par Kanlanfeyi Kabirou, Hounsinou Jordy". 
+
+https://github.com/ARSICMrk/ARSIC_PSBx/blob/main/R_Travail_Sup/Cross%20Validation.Rmd
+
+
+## Synthese : 
+
+<br> Fashion-MNISTest un ensemble de donnes d' images d'articles de Zalando , compos� d'un ensemble d'apprentissage de 60 000 exemples et d'un ensemble de test de 10 000 exemples. Chaque exemple est une image en niveaux de gris 28x28, associ�e � une �tiquette de 10 classes. Nous avons l'intention Fashion-MNISTde remplacer directement le jeu de donn�es MNIST original pour l'analyse comparative des algorithmes d'apprentissage automatique. Il partage la m�me taille d'image et la m�me structure que les divisions d'entra�nement et de test.
+
+<br>La base de donn�es MNIST pour Modified ou Mixed National Institute of Standards and Technology, est une base de donn�es de chiffres �crits � la main. C'est un jeu de donn�es tr�s utilis� en apprentissage automatique1.
+
+La reconnaissance de l'�criture manuscrite est un probl�me difficile, et un bon test pour les algorithmes d'apprentissage. La base MNIST est devenu un test standard1. Elle regroupe 60000 images d'apprentissage et 10000 images de test, issues d'une base de donn�es ant�rieure, appel�e simplement NIST1. Ce sont des images en noir et blanc, normalis�es centr�es de 28 pixels de c�t�.
+
+
+
+
+## Extrait commenté du code :
+
+En l'occurence, les auteurs utilisent le code suivant : 
+
+```{r}
+library(tidyverse)
+library(caret)
+# Téléchargement des données
+data("swiss")
+# Inspecter les données
+sample_n(swiss, 3)
+# Définition de l'échantillon d'entraînement
+set.seed(123) 
+
+train.control <- trainControl(method = "cv", number = 10)
+# Entraîner le modèle
+model <- train(Fertility ~., data = swiss, method = "lm",
+               trControl = train.control)
+# Résultats résumés
+print(model)
+
+# Définiiton de l'échantillon d'entraînement
+set.seed(123)
+train.control <- trainControl(method = "repeatedcv", 
+                              number = 10, repeats = 3)
+# Entraîner le modèle
+model <- train(Fertility ~., data = swiss, method = "lm",
+               trControl = train.control)
+# Résultats résumés
+print(model)
+```
+
+
+## Evalutation du travail : 
+
+Tout d'abord nous avons appris à travers ce tuto à comment créer un code permettant de cross valider un DataFrame pour pouvoir réaliser des modeles prédictifs. 
+
+<br> 1) Effort de présentation : le RMd est facile à lire et intuitif : J'ai pu constater que le RMD était effectivement facile à lire. 
+<br> 2) Le knit est réalisable et bien présenté : le knit s'est bien passé, pas trop long à élaborer sous R. 
+<br> 3) Explications simples et efficaces : les explications sont pas à pas en expliquant tout ce qui est utilisé à chaque instant.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité : seul petite ombre au tablea, cela m'a été compliqué de refaire un travail similaire avec un autre DataFrame. 
+<br> 5) Description des fonctions utilsés et du raisonnement : les fonctions sont bien décrites. Cela nosu permet de savoir leur impact sur le code. 
+
+
+
+## Conclusion : 
+En définitive, ce RMD tres instructif permet de faire découvrir le Cross Validation. Cependant je me permets de faire al remarque suivante, il est difficile selon moi de pouvoir refaire un tel travail avec d'autres valeurs du fait que leur travail étant un peu trop spécifique et pas assez généraliste.  
+
+

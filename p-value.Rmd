@@ -1,0 +1,79 @@
+---
+title: "NV TEMPALTE"
+author: "Victor Garcia"
+date: "22/12/2020"
+output: html_document
+encoding: "UTF-8"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clÃ© avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 critères. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RDd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n7  : "P-Value "
+
+Travail réalisé par "HAKIM DAIF ET ZAKARIA RIDADARAJAT " le 15 novembre 2020. 
+
+https://github.com/hakim-daif/p-value/blob/main/p-value.pdf
+
+
+
+
+## Synthese : 
+
+La p-valeur est utilisée pour quantifier la significativité statistique d'un résultat dans le cadre d'une hypothèse nulle. L'idée générale est de déterminer si l'hypothèse nulle est ou n'est pas vérifiée car dans le cas où elle le serait, le résultat observé serait fortement improbable. Il s'agit à ce titre d'une extension du principe de preuve par l'absurde.
+
+Un résultat statistiquement significatif est un résultat qui serait improbable si l'hypothèse nulle (qui représente en général la norme) était vérifiée. Il en résulte donc que l'hypothèse nulle ne s'applique pas au résultat observé et donc que le cas étudié diffère de manière notable de la norme et ainsi présente un intérêt particulier.
+
+Moralement, à titre d'exemple, imaginons que l'on connaisse la loi répartissant le poids des gens d'une population en surpoids et qu'on teste un traitement "minceur" sur un groupe de personnes. On évalue le poids moyen du groupe après le traitement et on vérifie avec la loi initiale si le résultat est probable ou improbable. S'il est "improbable", le traitement est efficace.
+
+En termes statistiques la p-value s'interprète comme la probabilité d'un résultat au moins aussi « extrême » que le résultat observé, « sachant l'hypothèse nulle », ou si l'on reprend la notation de probabilité type en appelant x le résultat observé et H0 l'hypothèse nulle on peut définir de manière naïve la p-valuenote 1 :
+
+{\displaystyle p=\mathbb {P} (x|H_{0}).}
+{\displaystyle p=\mathbb {P} (x|H_{0}).}
+
+Le résultat d'une p-value « improbable » (suivant des conventions à adopter) implique que l'expérience observée ne suit pas l'hypothèse nulle mais ne permet pas stricto sensu de pousser plus loin l'interprétation. La p-value ne doit pas être interprétée comme une probabilité sur l'hypothèse nulle et ne correspond pas, en reprenant la notation précédente, à P(H0|x) contrairement à une interprétation erronée parfois donnée.
+
+
+
+## Extrait commenté du code : 
+
+N'arrivant pas à récupérer le code sur le  PDF, je vais me contenter de seulement commenter et expliquer. 
+
+j'ai choisis la partie du code qui utilise lafonction "mean" ce qui permettre de connaitre la taille moyenne d'un dataframe. 
+
+
+## Evalutation du travail : 
+
+
+<br> 1) Effort de présentation : Presentation extremement bien faite, le latex est remarquable, bien structuré 
+
+<br> 2) Le knit est réalisable et bien présenté : le knit se réalise parfaitement, mais un peu long 
+
+<br> 3) Explications simples et efficaces : Malgré mon niveau limité en mathématiques, j'ai pu comprendre parfaitement les différentes notions expliqués dans ce RMD
+
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité : Effectivement, il est facile de reproduire un code équivalent. 
+
+<br> 5) Description des fonctions utilsées et du raisonnement : on a une bonne description des fonctions utilisés, avec de nombreux exemples divers et variés. 
+
+
+## Conclusion : 
+
+Etant donné la qualité remarquable de leur RMD, il m'a été difficile de choisir une pertie de code en particulier. Mise à part cette parentheses, leur travail retrace parfaitement toute la notion de p-value. 

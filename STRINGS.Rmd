@@ -1,0 +1,71 @@
+---
+title: "NV TEMPALTE"
+author: "Victor Garcia"
+date: "22/12/2020"
+output: html_document
+encoding: "UTF-8"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+<br> Dans le cadre de notre partiel, nous devons réaliser un total de 12 travaux retracant notre parcours et notre travail durant les 30 heures de cours. 
+<br>    Le travail à faire est le suivant : 
+<br>    - Une entête comportant un titre, un lien Github avec le ou les noms des auteurs.
+<br>    - Une synthese de ce travail 
+<br>    - Un extrait commenté avec des parties de codes clÃ© avec explication et commentaire. 
+<br>    - Une évalutation du travail avec nos 5 critères. 
+<br>    - Une conclusion du travail 
+
+## Definition des 5 critères de notations : 
+<br> 1) Effort de présentation : le RDd est facile à lire et intuitif. 
+<br> 2) Le knit est réalisable et bien présenté.
+<br> 3) Explications simples et efficaces.
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité. 
+<br> 5) Description des fonctions utilsés et du raisonnement. 
+
+## Travail n7  : "MANIPULATION DE STRING avec R"
+
+Travail réalisé par "Léonard Boisson " le 15/11/2020 
+
+https://github.com/LeoBsn/PSB-PROJECT/blob/main/Manipuler%20des%20string%20avec%20R.pdf
+
+
+
+## Synthese : 
+
+Ce Rmd nous présente comment manipuler des chaines de caractères sur R. Pour cela,il suffit d'utilser le package "stringr". Ce RMD nous explique les differentes fonctions clés 
+
+
+
+## Extrait commenté du code : 
+
+
+str_to_lower(d$cast)
+str_to_upper(d$cast)
+str_trim('       Le vent souffle sur les plaines de la Bretagne armoricaine       ')
+
+Ces fonctions de bases me seront très utile lorsque je devrais, le semestre prochain travailler sur les différentes bases de données sur le Covid qui ne sont pas toutes homogènes. (avec notamment le nom des hopitaux qui ne sont pas tous sous le même format)
+
+## Evalutation du travail : 
+
+
+<br> 1) Effort de présentation : effectivement tout est facile à lire puis bien organisé en rubriquen, les shemas aident à la compréhension.  
+
+<br> 2) Le knit est réalisable et bien présenté : knit facile et rapide. 
+
+<br> 3) Explications simples et efficaces : Explication faciles à la compréhension 
+
+<br> 4) Le Code reproductible à d'autres DataFrame avec facilité : en l'occurrence comme il s'agit de string, on n'a pas besoin de data frame et le code est réalisable avec tous les strings possible, j'ai pu réaliser un code équivalent sans difficulté. 
+
+<br> 5) Description des fonctions utilsées et du raisonnement : les fonctions sont expliqués dans leur globalité mais pas en profondeur. 
+
+
+## Conclusion : 
+
+Il s'agit d'un RMD tres intéressant pour faire le tri dans les trings, bien expliqué et dupplicable. Cest un Rmd que je vais garder et classer car je compte bien le réutiliser lors du semestre prochain. 
+
+ 
